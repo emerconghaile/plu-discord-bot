@@ -1,6 +1,6 @@
 # PLU Discord Bot
 
-A Discord bot for quizzing you on PLU codes
+A Discord bot for searching and memorizing PLU codes
 
 Work in progress (try the !search command)
 
