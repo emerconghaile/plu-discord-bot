@@ -12,7 +12,7 @@ Made with Node.js and Discord.js
 
 Data sourced from [IFPS](https://www.ifpsglobal.com/PLU-Codes/PLU-codes-Search "IFPS")
 
-Data is a .csv file and cleaned up with some awk & sed regex
+Data stored as CSV and cleaned up with awk & sed regex
 
 - [original .csv](https://github.com/emerconghaile/plu-discord-bot/blob/main/Commodities_20210406090430.csv)
 - [awk & sed regex](https://github.com/emerconghaile/plu-discord-bot/blob/main/csvREGEX.sh)
