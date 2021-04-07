@@ -1,3 +1,5 @@
+// Load the secret bot token
+const token = require('./token.json');
 // Load the fast-csv parse module
 const fs = require('fs')
 const csv = require('@fast-csv/parse')
@@ -91,5 +93,4 @@ searchCommand = (arguments, message) => {
 }
 
 // Bot login
-bot_secret_token = "ODI5MjQyOTM5NzcxMTkxMzA2.YG1Sqw.Eu72e6UEzgZvF7LRKX62twf0WS8"
-client.login(bot_secret_token)
+client.login(token.token)
