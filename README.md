@@ -2,13 +2,22 @@
 
 A Discord bot for quizzing you on PLU codes
 
+Work in progress (try to the !search command)
+
 [Add me to your Discord Server](https://discord.com/api/oauth2/authorize?client_id=829242939771191306&permissions=0&scope=bot "Bot Invite")
 
 ## About
 
 Made with Node.js and Discord.js
 
-Work in progress (try to the !search command)
+Data sourced from [IFPS](https://www.ifpsglobal.com/PLU-Codes/PLU-codes-Search "IFPS")
+
+Data is stored as a .csv and then cleaned up with some awk and sed regex
+
+- [original .csv](https://github.com/emerconghaile/plu-discord-bot/blob/main/Commodities_20210406090430.csv)
+- [awk & sed regex](https://github.com/emerconghaile/plu-discord-bot/blob/main/csvREGEX.sh)
+- [clean .csv](https://github.com/emerconghaile/plu-discord-bot/blob/main/allPLUcodes.csv)
+
 
 ## Dependencies
 - discord.js
