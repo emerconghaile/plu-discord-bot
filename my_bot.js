@@ -60,6 +60,7 @@ processCommand = message => {
 
     console.log("\nServer: " + message.guild.name)
     console.log("Channel: " + message.channel.name)
+    console.log("User: " + message.author)
     console.log("Command: " + primaryCommand)
     console.log("Arguments: " + arguments)
 
@@ -67,15 +68,17 @@ processCommand = message => {
         helpCommand(arguments, message)
     } else if (primaryCommand == "search") {
         searchCommand(arguments, message)
+    } else if (primaryCommand == "github") {
+        githubCommand(arguments, message)
     } else {
         message.channel.send("Invalid command, type !help")
     }
 }
-// "!help"
+// !help
 helpCommand = (arguments, message) => {
     message.channel.send("Current valid commands: 1) !search")
 }
-// "!search"
+// !search
 searchCommand = (arguments, message) => {
     if (arguments[0] == "PLU" && arguments.length >= 2) {
         let obj = dataArr.find(obj => obj.PLU == arguments[1])
@@ -94,6 +97,10 @@ searchCommand = (arguments, message) => {
     } else {
         message.channel.send("Invalid command, try '!search PLU (number)'")
     }
+}
+// !github
+githubCommand = (arguments, message) => {
+    message.author.send("https://github.com/emerconghaile/plu-discord-bot/")
 }
 
 // Bot login
