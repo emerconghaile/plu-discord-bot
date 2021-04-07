@@ -81,7 +81,11 @@ searchCommand = (arguments, message) => {
         let obj = dataArr.find(obj => obj.PLU == arguments[1])
         console.log(obj)
         if ( typeof obj !== "undefined") {
-            message.channel.send(`${obj.COMMODITY}, ${obj.VARIETY}, ${obj.SIZE}`)
+            if (obj.VARIETY) {
+                message.channel.send(`${obj.COMMODITY}, ${obj.VARIETY}, ${obj.SIZE}`)
+            } else {
+                message.channel.send(`${obj.COMMODITY}, -- , ${obj.SIZE}`)
+            }
         } else {
             message.channel.send("Invalid PLU")
         }
